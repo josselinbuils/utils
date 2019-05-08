@@ -1,7 +1,18 @@
 {
   "name": "@josselinbuils/utils",
+  "author": "Josselin BUILS",
+  "license": "MIT",
   "version": "0.1.1",
+  "description": "JS/TS utils library.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josselinbuils/utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josselinbuils/utils/issues"
+  },
+  "homepage": "https://github.com/josselinbuils/utils#readme",
   "umd:main": "dist/utils.umd.production.js",
   "module": "dist/utils.es.production.js",
   "typings": "dist/index.d.ts",
