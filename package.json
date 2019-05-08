@@ -6,7 +6,7 @@
   "description": "JS/TS utils library.",
   "main": "dist/index.js",
   "scripts": {
-    "doc": "api-extractor run --local && api-documenter markdown -i temp -o doc",
+    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
     "build": "tsdx build",
     "test": "tsdx test"
   },

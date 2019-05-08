@@ -4,6 +4,8 @@
 
 ## utils package
 
+Light JS/TS utils library.
+
 ## Classes
 
 |  Class | Description |
