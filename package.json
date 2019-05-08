@@ -1,15 +1,40 @@
 {
   "name": "@josselinbuils/utils",
+  "version": "0.1.2",
   "author": "Josselin BUILS",
   "license": "MIT",
-  "version": "0.1.1",
-  "description": "JS/TS utils library.",
-  "main": "dist/index.js",
+  "description": "Light JS/TS utils library.",
   "scripts": {
-    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
-    "build": "tsdx build",
-    "test": "tsdx test"
+    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc && rimraf temp",
+    "build": "rimraf dist && rollup -c && yarn doc && rimraf dist/src",
+    "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "husky": "^2.2.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.11.3",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.21.0",
+    "ts-jest": "^24.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "homepage": "https://github.com/josselinbuils/utils#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josselinbuils/utils.git"
@@ -17,29 +42,7 @@
   "bugs": {
     "url": "https://github.com/josselinbuils/utils/issues"
   },
-  "homepage": "https://github.com/josselinbuils/utils#readme",
-  "umd:main": "dist/utils.umd.production.js",
-  "module": "dist/utils.es.production.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "peerDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "prettier": {
     "singleQuote": true
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.12",
-    "husky": "^2.2.0",
-    "prettier": "^1.17.0",
-    "pretty-quick": "^1.10.0",
-    "tsdx": "^0.5.7",
-    "tslib": "^1.9.3",
-    "typescript": "^3.4.5"
   }
 }
