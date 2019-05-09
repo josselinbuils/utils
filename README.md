@@ -15,4 +15,4 @@ npm install @josselinbuils/utils
 import { getIn } from '@josselinbuils/utils';
 ```
 
-[API Documentation](./doc/utils.md)
+[API Documentation](./doc/README.md)
