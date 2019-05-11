@@ -5,7 +5,7 @@
   "license": "MIT",
   "description": "Light JS/TS utils library.",
   "scripts": {
-    "doc": "api-documenter markdown -i temp -o doc",
+    "doc": "api-documenter markdown -i temp -o doc && prettier --write doc/**/*.md",
     "build": "rimraf dist && rollup -c && api-extractor run --local --verbose && rimraf dist/src",
     "test": "jest"
   },
@@ -15,7 +15,7 @@
     }
   },
   "devDependencies": {
-    "@josselinbuils/api-documenter": "^0.1.5",
+    "@josselinbuils/api-documenter": "^0.2.0",
     "@microsoft/api-extractor": "^7.1.4",
     "@types/jest": "^24.0.12",
     "husky": "^2.2.0",
