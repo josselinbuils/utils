@@ -6,10 +6,10 @@
 
 ## Classes
 
-| Class                     | Description                                                                                                   |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Deferred](./Deferred.md) | Promise wrapper that allows to manipulate it more easily by making and accessible outside the usual callback. |
-| [Subject](./Subject.md)   | Observable implementation that allows multiple observers to watch values.                                     |
+| Class                     | Description                                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [Deferred](./Deferred.md) | Promise wrapper that allows to manipulate it more easily by making `resolve` and `reject` accessible outside the usual callback. |
+| [Subject](./Subject.md)   | Observable implementation that allows multiple observers to watch values.                                                        |
 
 ## Functions
 

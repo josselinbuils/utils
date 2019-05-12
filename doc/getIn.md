@@ -12,14 +12,33 @@ function getIn(obj: any, key: string, defaultValue?: any): any
 
 ## Parameters
 
-| Parameter    | Type     | Description                                        |
-| ------------ | -------- | -------------------------------------------------- |
-| obj          | `any`    | Object to retrieve the value.                      |
-| key          | `string` | Path of the value.                                 |
-| defaultValue | `any`    | Default value to return if the value is not found. |
+| Parameter    | Type     | Description                   |
+| ------------ | -------- | ----------------------------- |
+| obj          | `any`    | Object to retrieve the value. |
+| key          | `string` | Path of the value.            |
+| defaultValue | `any`    | Default value.                |
 
 ## Returns
 
 `any`
 
-Value if found, default value or otherwise.
+Value if found, default value or `undefined` otherwise.
+
+## Example
+
+```js
+const obj = {
+  key: {
+    values: [1, 2, 3]
+  }
+};
+
+// Returns 2
+getIn(obj, 'key.values[1]');
+
+// Returns undefined
+getIn(obj, 'key.values[100]');
+
+// Returns -1
+getIn(obj, 'key.values[100]', -1);
+```

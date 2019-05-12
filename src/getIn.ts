@@ -4,7 +4,7 @@
  *
  * @param obj - Object to retrieve the value.
  * @param key - Path of the value.
- * @param defaultValue - Default value to return if the value is not found.
+ * @param defaultValue - Default value.
  * @returns Value if found, default value or `undefined` otherwise.
  *
  * @example
@@ -13,7 +13,7 @@
  *   key: {
  *     values: [1, 2, 3]
  *   }
- * }
+ * };
  *
  * // Returns 2
  * getIn(obj, 'key.values[1]');

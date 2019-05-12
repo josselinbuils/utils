@@ -4,7 +4,7 @@
 
 # Deferred
 
-Promise wrapper that allows to manipulate it more easily by making and accessible outside the usual callback.
+Promise wrapper that allows to manipulate it more easily by making `resolve` and `reject` accessible outside the usual callback.
 
 ```typescript
 class Deferred<T>
