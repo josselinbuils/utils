@@ -6,16 +6,14 @@
 
 Promise wrapper that allows to manipulate it more easily by making and accessible outside the usual callback.
 
-**Signature:**
-
 ```typescript
 class Deferred<T>
 ```
 
-# Properties
+## Properties
 
-| Property | Type                        | Description           |
-| -------- | --------------------------- | --------------------- |
-| promise  | Promise&lt;T&gt;            |                       |
-| reject   | (...args: any[]) =&gt; void | Rejects the promise.  |
-| resolve  | (...args: any[]) =&gt; void | Resolves the promise. |
+| Property | Type                       | Description           |
+| -------- | -------------------------- | --------------------- |
+| promise  | `Promise<T>`               |                       |
+| reject   | `(...args: any[]) => void` | Rejects the promise.  |
+| resolve  | `(...args: any[]) => void` | Resolves the promise. |

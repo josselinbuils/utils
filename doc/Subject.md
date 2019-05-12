@@ -6,13 +6,11 @@
 
 Observable implementation that allows multiple observers to watch values.
 
-**Signature:**
-
 ```typescript
 class Subject<T>
 ```
 
-# Methods
+## Methods
 
 | Method                              | Description                             |
 | ----------------------------------- | --------------------------------------- |

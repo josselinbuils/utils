@@ -6,14 +6,18 @@
 
 Subscribes to subject updates.
 
-**Signature:**
-
 ```typescript
 subscribe(subscription: (value: T) => void): () => void
 ```
 
-# Parameters
+## Parameters
 
-| Parameter    | Type                  | Description                                |
-| ------------ | --------------------- | ------------------------------------------ |
-| subscription | (value: T) =&gt; void | Callback that will receive Subject values. |
+| Parameter    | Type                 | Description                                |
+| ------------ | -------------------- | ------------------------------------------ |
+| subscription | `(value: T) => void` | Callback that will receive Subject values. |
+
+## Returns
+
+`() => void`
+
+Unsubscribe function.

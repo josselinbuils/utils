@@ -285,10 +285,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@josselinbuils/api-documenter@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@josselinbuils/api-documenter/-/api-documenter-0.3.1.tgz#a30aa42a55171892b66a9a24092cbf79af448a9f"
-  integrity sha512-O3/gODvQ3AdTtQc6eFy8ewzUAlRktVy8MUnkeDWXhyUnZSzcgV+KZJ3l5qqvLK56SNEXpBx9AP7kmMgSQbsV0g==
+"@josselinbuils/api-documenter@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@josselinbuils/api-documenter/-/api-documenter-0.3.2.tgz#2c577478ab95f0715460326f351c4e3408ce247d"
+  integrity sha512-b0+VeyFooLP6zVoU2KrFQk4pF7iKweV4Ho+hpLGUmwHhXUisbmuAifPTB1Cxv6IHYzNFFY6eOPfZ34mpJfBmgQ==
   dependencies:
     "@microsoft/api-extractor" "^7.1.4"
     "@microsoft/api-extractor-model" "7.1.0"

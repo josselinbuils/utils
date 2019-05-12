@@ -6,16 +6,20 @@
 
 Allows to get a value deeply in an object without throwing an exception if the path does not exist.
 
-**Signature:**
-
 ```typescript
-function getIn(obj: any, key: string, defaultValue?: any): any;
+function getIn(obj: any, key: string, defaultValue?: any): any
 ```
 
-# Parameters
+## Parameters
 
-| Parameter    | Type   | Description                                        |
-| ------------ | ------ | -------------------------------------------------- |
-| obj          | any    | Object to retrieve the value.                      |
-| key          | string | Path of the value.                                 |
-| defaultValue | any    | Default value to return if the value is not found. |
+| Parameter    | Type     | Description                                        |
+| ------------ | -------- | -------------------------------------------------- |
+| obj          | `any`    | Object to retrieve the value.                      |
+| key          | `string` | Path of the value.                                 |
+| defaultValue | `any`    | Default value to return if the value is not found. |
+
+## Returns
+
+`any`
+
+Value if found, default value or otherwise.

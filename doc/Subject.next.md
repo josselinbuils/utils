@@ -6,14 +6,16 @@
 
 Sends a value to all Subject observers.
 
-**Signature:**
-
 ```typescript
 next(value: T): void
 ```
 
-# Parameters
+## Parameters
 
 | Parameter | Type | Description    |
 | --------- | ---- | -------------- |
-| value     | T    | Value to send. |
+| value     | `T`  | Value to send. |
+
+## Returns
+
+`void`

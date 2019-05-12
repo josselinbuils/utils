@@ -25,6 +25,7 @@ export class Subject<T> {
    * Subscribes to subject updates.
    *
    * @param subscription - Callback that will receive Subject values.
+   * @returns Unsubscribe function.
    */
   subscribe(subscription: (value: T) => void): () => void {
     this.subscriptions.push(subscription);
