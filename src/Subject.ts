@@ -26,7 +26,7 @@ export class Subject<T> {
    *
    * @param subscription - Callback that will receive Subject values.
    */
-  subscribe(subscription: Subscription<T>): () => void {
+  subscribe(subscription: (value: T) => void): () => void {
     this.subscriptions.push(subscription);
 
     if (this.defaultValue !== undefined) {
@@ -39,10 +39,3 @@ export class Subject<T> {
     };
   }
 }
-
-/**
- * Callback that will receive Subject values.
- *
- * @public
- */
-export type Subscription<T> = (value: T) => void;
