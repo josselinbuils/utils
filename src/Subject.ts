@@ -1,13 +1,11 @@
 /**
  * Observable implementation that allows multiple observers to watch values.
- *
- * @public
  */
 export class Subject<T> {
-  private subscriptions: ((value: T) => void)[] = [];
+  private readonly subscriptions: ((value: T) => void)[] = [];
   private value: T | undefined;
 
-  constructor(private defaultValue?: T) {
+  constructor(private readonly defaultValue?: T) {
     this.value = defaultValue;
   }
 

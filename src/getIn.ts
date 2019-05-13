@@ -24,8 +24,6 @@
  * // Returns -1
  * getIn(obj, 'key.values[100]', -1);
  * ```
- *
- * @public
  */
 export function getIn(obj: any, key: string, defaultValue?: any): any {
   const path = key.match(/[^.[\]]+/g) as string[];

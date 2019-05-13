@@ -7,15 +7,17 @@
   "scripts": {
     "doc": "api-documenter",
     "build": "rimraf dist && rollup -c && api-extractor run --local --verbose && rimraf dist/src",
+    "lint": "tslint -p tsconfig.json",
     "test": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --pattern \"**/*.ts\""
+      "pre-commit": "npm run lint && npm run test && pretty-quick --staged --pattern \"**/*.ts\""
     }
   },
   "devDependencies": {
     "@josselinbuils/api-documenter": "^0.3.2",
+    "@josselinbuils/tslint": "^2.0.0",
     "@microsoft/api-extractor": "^7.1.4",
     "@types/jest": "^24.0.12",
     "husky": "^2.2.0",
@@ -29,6 +31,7 @@
     "rollup-plugin-typescript2": "^0.21.0",
     "ts-jest": "^24.0.2",
     "tslib": "^1.9.3",
+    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
   "main": "dist/index.js",
