@@ -2,7 +2,7 @@
 
 [utils](../README.md) > [API Documentation](./README.md) > [getIn](./getIn.md)
 
-# getIn()
+# getIn
 
 Allows to get a value deeply in an object without throwing an exception if the path does not exist.
 

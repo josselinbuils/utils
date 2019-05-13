@@ -1,5 +1,7 @@
 /**
  * Observable implementation that allows multiple observers to watch values.
+ *
+ * @public
  */
 export class Subject<T> {
   private readonly subscriptions: ((value: T) => void)[] = [];

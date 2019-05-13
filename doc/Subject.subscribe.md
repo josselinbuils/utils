@@ -2,7 +2,7 @@
 
 [utils](../README.md) > [API Documentation](./README.md) > [Subject](./Subject.md) > [subscribe](./Subject.subscribe.md)
 
-# Subject.subscribe()
+# subscribe
 
 Subscribes to subject updates.
 

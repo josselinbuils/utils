@@ -2,7 +2,7 @@
 
 [utils](../README.md) > [API Documentation](./README.md) > [Subject](./Subject.md) > [next](./Subject.next.md)
 
-# Subject.next()
+# next
 
 Sends a value to all Subject observers.
 
