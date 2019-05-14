@@ -9,13 +9,13 @@
  *
  * deferred.promise.then(newValue => value = newValue);
  *
- * // print 'initialValue'
  * console.log(value);
+ * // initialValue
  *
  * deferred.resolve('Hello');
  *
- * // print 'Hello'
  * console.log(value);
+ * // Hello
  * ```
  */
 export class Deferred<T> {
