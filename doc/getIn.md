@@ -4,7 +4,7 @@
 
 # getIn
 
-Allows to get a value deeply in an object without throwing an exception if the path does not exist.
+Retrieves a value deeply in an object without throwing an exception if the path does not exist.
 
 ```typescript
 function getIn(obj: any, key: string, defaultValue?: any): any

@@ -12,8 +12,25 @@ class Deferred<T>
 
 ## Properties
 
-| Property | Type                       | Description           |
-| -------- | -------------------------- | --------------------- |
-| promise  | `Promise<T>`               |                       |
-| reject   | `(...args: any[]) => void` | Rejects the promise.  |
-| resolve  | `(...args: any[]) => void` | Resolves the promise. |
+| Property | Type                     | Description           |
+| -------- | ------------------------ | --------------------- |
+| promise  | `Promise<T>`             |                       |
+| reject   | `(reason?: any) => void` | Rejects the promise.  |
+| resolve  | `(value?: T) => void`    | Resolves the promise. |
+
+## Example
+
+```js
+const deferred = new Deferred();
+let value = 'initialValue';
+
+deferred.promise.then(newValue => value = newValue);
+
+// print 'initialValue'
+console.log(value);
+
+deferred.resolve('Hello');
+
+// print 'Hello'
+console.log(value);
+```

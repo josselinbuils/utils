@@ -7,14 +7,14 @@
 Subscribes to subject updates.
 
 ```typescript
-subscribe(subscription: (value: T) => void): () => void
+subscribe(subscription: (value: T | undefined) => void): () => void
 ```
 
 ## Parameters
 
-| Parameter    | Type                 | Description                                |
-| ------------ | -------------------- | ------------------------------------------ |
-| subscription | `(value: T) => void` | Callback that will receive Subject values. |
+| Parameter    | Type                             | Description                                |
+| ------------ | -------------------------------- | ------------------------------------------ |
+| subscription | `(value: T ǀ undefined) => void` | Callback that will receive Subject values. |
 
 ## Returns
 

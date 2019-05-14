@@ -13,6 +13,6 @@
 
 ## Functions
 
-| Function            | Description                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------- |
-| [getIn](./getIn.md) | Allows to get a value deeply in an object without throwing an exception if the path does not exist. |
+| Function            | Description                                                                                     |
+| ------------------- | ----------------------------------------------------------------------------------------------- |
+| [getIn](./getIn.md) | Retrieves a value deeply in an object without throwing an exception if the path does not exist. |

@@ -10,6 +10,16 @@ Observable implementation that allows multiple observers to watch values.
 class Subject<T>
 ```
 
+## Constructor
+
+```typescript
+constructor(defaultValue?: T | undefined)
+```
+
+| Parameter    | Type            | Description                                                                                                                                                                                                                                                                                         |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultValue | `T ǀ undefined` | <p>Value to send by default to new subscribers.</p><p>If a default value was provided and a new value is sent using next, the new value will become the default value.</p><p>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next .</p> |
+
 ## Methods
 
 | Method                              | Description                             |

@@ -1,6 +1,6 @@
 /**
- * Allows to get a value deeply in an object without throwing an exception if
- * the path does not exist.
+ * Retrieves a value deeply in an object without throwing an exception if the
+ * path does not exist.
  *
  * @param obj - Object to retrieve the value.
  * @param key - Path of the value.
@@ -24,8 +24,6 @@
  * // Returns -1
  * getIn(obj, 'key.values[100]', -1);
  * ```
- *
- * @public
  */
 export function getIn(obj: any, key: string, defaultValue?: any): any {
   const path = key.match(/[^.[\]]+/g) as string[];
