@@ -11,8 +11,4 @@ npm install @josselinbuils/utils
 
 ## Usage
 
-```typescript
-import { getIn } from '@josselinbuils/utils';
-```
-
 [API Documentation](./doc/README.md)
