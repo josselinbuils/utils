@@ -1,5 +1,27 @@
 /**
  * Observable implementation that allows multiple observers to watch values.
+ *
+ * @example
+ * ```js
+ * import { Deferred } from '@josselinbuils/utils';
+ *
+ * let value =
+ *
+ * const subject = new Subject();
+ * let value = 'initialValue';
+ *
+ * const unsubscribe = subject.subscribe(newValue => (value = newValue));
+ *
+ * subject.next('Hello');
+ * // value: Hello
+ *
+ * subject.next('World');
+ * // value: World
+ *
+ * unsubscribe();
+ * subject.next('WAZAAAA');
+ * // value: World
+ * ```
  */
 export class Subject<T> {
   private readonly subscriptions: ((value: T | undefined) => void)[] = [];

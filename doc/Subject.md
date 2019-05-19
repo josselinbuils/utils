@@ -26,3 +26,26 @@ constructor(defaultValue?: T | undefined)
 | ----------------------------------- | --------------------------------------- |
 | [next](./Subject.next.md)           | Sends a value to all Subject observers. |
 | [subscribe](./Subject.subscribe.md) | Subscribes to subject updates.          |
+
+## Example
+
+```js
+import { Deferred } from '@josselinbuils/utils';
+
+let value =
+
+const subject = new Subject();
+let value = 'initialValue';
+
+const unsubscribe = subject.subscribe(newValue => (value = newValue));
+
+subject.next('Hello');
+// value: Hello
+
+subject.next('World');
+// value: World
+
+unsubscribe();
+subject.next('WAZAAAA');
+// value: World
+```

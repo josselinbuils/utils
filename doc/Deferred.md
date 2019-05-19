@@ -21,16 +21,13 @@ class Deferred<T>
 ## Example
 
 ```js
+import { Deferred } from '@josselinbuils/utils';
+
 const deferred = new Deferred();
 let value = 'initialValue';
 
-deferred.promise.then(newValue => value = newValue);
-
-console.log(value);
-// initialValue
+deferred.promise.then(newValue => (value = newValue));
 
 deferred.resolve('Hello');
-
-console.log(value);
-// Hello
+// value: Hello
 ```

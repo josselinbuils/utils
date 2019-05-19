@@ -27,6 +27,8 @@ Value if found, default value or `undefined` otherwise.
 ## Example
 
 ```js
+import { getIn } from '@josselinbuils/utils';
+
 const obj = {
   key: {
     values: [1, 2, 3]

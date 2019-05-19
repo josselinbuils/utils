@@ -9,6 +9,8 @@
  *
  * @example
  * ```js
+ * import { getIn } from '@josselinbuils/utils';
+ *
  * const obj = {
  *   key: {
  *     values: [1, 2, 3]
