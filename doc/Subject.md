@@ -30,9 +30,7 @@ constructor(defaultValue?: T | undefined)
 ## Example
 
 ```js
-import { Deferred } from '@josselinbuils/utils';
-
-let value =
+import { Subject } from '@josselinbuils/utils';
 
 const subject = new Subject();
 let value = 'initialValue';
