@@ -1,6 +1,6 @@
 {
   "name": "@josselinbuils/utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Josselin BUILS",
   "license": "MIT",
   "description": "Light JS/TS utils library.",
@@ -38,9 +38,6 @@
     "tslint": "^5.20.1",
     "typescript": "^4.0.5"
   },
-  "files": [
-    "dist"
-  ],
   "homepage": "https://github.com/josselinbuils/utils#readme",
   "repository": {
     "type": "git",
