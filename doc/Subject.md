@@ -30,7 +30,7 @@ constructor(defaultValue?: T | undefined)
 ## Example
 
 ```js
-import { Subject } from '@josselinbuils/utils';
+import { Subject } from '@josselinbuils/utils/Subject';
 
 const subject = new Subject();
 let value = 'initialValue';

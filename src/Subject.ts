@@ -3,7 +3,7 @@
  *
  * @example
  * ```js
- * import { Subject } from '@josselinbuils/utils';
+ * import { Subject } from '@josselinbuils/utils/Subject';
  *
  * const subject = new Subject();
  * let value = 'initialValue';
@@ -22,7 +22,7 @@
  * ```
  */
 export class Subject<T> {
-  private readonly subscriptions: ((value: T | undefined) => void)[] = [];
+  private readonly subscriptions: ((value: T) => void)[] = [];
   private value: T | undefined;
 
   /**
@@ -43,9 +43,9 @@ export class Subject<T> {
    *
    * @param value - Value to send.
    */
-  next(value?: T): void {
+  next(value: T): void {
     this.value = value;
-    this.subscriptions.forEach(subscription => subscription(value));
+    this.subscriptions.forEach((subscription) => subscription(value));
   }
 
   /**
@@ -54,7 +54,7 @@ export class Subject<T> {
    * @param subscription - Callback that will receive Subject values.
    * @returns Unsubscribe function.
    */
-  subscribe(subscription: (value: T | undefined) => void): () => void {
+  subscribe(subscription: (value: T) => void): () => void {
     this.subscriptions.push(subscription);
 
     if (this.defaultValue !== undefined) {

@@ -7,7 +7,7 @@
 Sends a value to all Subject observers.
 
 ```typescript
-next(value?: T): void
+next(value: T): void
 ```
 
 ## Parameters

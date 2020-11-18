@@ -4,7 +4,7 @@
  *
  * @example
  * ```js
- * import { Deferred } from '@josselinbuils/utils';
+ * import { Deferred } from '@josselinbuils/utils/Deferred';
  *
  * const deferred = new Deferred();
  * let value = 'initialValue';

@@ -38,7 +38,7 @@ describe('Subject', () => {
   });
 
   it('should allow subscriptions to unsubscribe', () => {
-    const subject = new Subject();
+    const subject = new Subject<string>();
     const subscription = jest.fn();
     const value = 'hello';
     const unsubscribe = subject.subscribe(subscription);

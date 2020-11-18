@@ -15,18 +15,18 @@ class Deferred<T>
 | Property | Type                     | Description           |
 | -------- | ------------------------ | --------------------- |
 | promise  | `Promise<T>`             |                       |
-| reject   | `(reason?: any) => void` | Rejects the promise.  |
-| resolve  | `(value?: T) => void`    | Resolves the promise. |
+| reject   | `(reason?: any) => void` | Rejects the promise.  |
+| resolve  | `(value?: T) => void`    | Resolves the promise. |
 
 ## Example
 
 ```js
-import { Deferred } from '@josselinbuils/utils';
+import { Deferred } from '@josselinbuils/utils/Deferred';
 
 const deferred = new Deferred();
 let value = 'initialValue';
 
-deferred.promise.then(newValue => (value = newValue));
+deferred.promise.then((newValue) => (value = newValue));
 
 deferred.resolve('Hello');
 // value: Hello
