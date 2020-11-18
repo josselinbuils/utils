@@ -11,11 +11,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
+    "outDir": "dist",
     "paths": {
       "*": ["src/*", "node_modules/*"]
     },
-    "rootDir": "./",
-    "sourceMap": true,
+    "rootDir": "src",
     "strict": true,
     "target": "esnext"
   },

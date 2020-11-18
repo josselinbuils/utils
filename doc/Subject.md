@@ -18,14 +18,14 @@ constructor(defaultValue?: T | undefined)
 
 | Parameter    | Type            | Description                                                                                                                                                                                                                                                                                        |
 | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.<br/><br/>If a default value was provided and a new value is sent using next, the new value will become the default value.<br/><br/>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
+| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.<br/><br/>If a default value was provided and a new value is sent using next, the new value will become the default value.<br/><br/>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
 
 ## Methods
 
-| Method                              | Description                             |
-| ----------------------------------- | --------------------------------------- |
-| [next](./Subject.next.md)           | Sends a value to all Subject observers. |
-| [subscribe](./Subject.subscribe.md) | Subscribes to subject updates.          |
+| Method                                | Description                             |
+| ------------------------------------- | --------------------------------------- |
+| [next](./Subject.next_1.md)           | Sends a value to all Subject observers. |
+| [subscribe](./Subject.subscribe_1.md) | Subscribes to subject updates.          |
 
 ## Example
 
@@ -35,7 +35,7 @@ import { Subject } from '@josselinbuils/utils';
 const subject = new Subject();
 let value = 'initialValue';
 
-const unsubscribe = subject.subscribe(newValue => (value = newValue));
+const unsubscribe = subject.subscribe((newValue) => (value = newValue));
 
 subject.next('Hello');
 // value: Hello
