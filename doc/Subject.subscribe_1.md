@@ -14,7 +14,7 @@ subscribe(subscription: (value: T) => void): () => void
 
 | Parameter    | Type                 | Description                                |
 | ------------ | -------------------- | ------------------------------------------ |
-| subscription | `(value: T) => void` | Callback that will receive Subject values. |
+| subscription | `(value: T) => void` | Callback that will receive Subject values. |
 
 ## Returns
 

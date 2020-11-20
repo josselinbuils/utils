@@ -18,7 +18,7 @@ constructor(defaultValue?: T | undefined)
 
 | Parameter    | Type            | Description                                                                                                                                                                                                                                                                                        |
 | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.<br/><br/>If a default value was provided and a new value is sent using next, the new value will become the default value.<br/><br/>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
+| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.<br/><br/>If a default value was provided and a new value is sent using next, the new value will become the default value.<br/><br/>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
 
 ## Methods
 
@@ -35,7 +35,7 @@ import { Subject } from '@josselinbuils/utils/Subject';
 const subject = new Subject();
 let value = 'initialValue';
 
-const unsubscribe = subject.subscribe((newValue) => (value = newValue));
+const unsubscribe = subject.subscribe(newValue => (value = newValue));
 
 subject.next('Hello');
 // value: Hello

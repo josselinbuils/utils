@@ -5,13 +5,13 @@
   "license": "MIT",
   "description": "Light JS/TS utils library.",
   "scripts": {
-    "add:staged": "exec-staged 'git add' '\\.(js|md|ts)$'",
+    "add:staged": "exec-staged 'git add' '\\.(js|ts)$'",
     "copy:package-files": "cpx ./package.json dist && cpx ./README.md dist",
     "doc": "api-documenter",
     "build": "rimraf dist && rollup -c && yarn doc && rimraf dist/index.d.ts && yarn copy:package-files",
     "lint": "tslint -p tsconfig.json",
     "lint:staged": "exec-staged 'yarn lint' '\\.ts$'",
-    "prettier:staged": "exec-staged 'prettier --write' '\\.(js|md|ts)$'",
+    "prettier:staged": "exec-staged 'prettier --write' '\\.(js|ts)$'",
     "test": "jest"
   },
   "husky": {
