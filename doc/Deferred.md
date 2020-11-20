@@ -12,11 +12,11 @@ class Deferred<T>
 
 ## Properties
 
-| Property | Type                     | Description           |
-| -------- | ------------------------ | --------------------- |
-| promise  | `Promise<T>`             |                       |
-| reject   | `(reason?: any) => void` | Rejects the promise.  |
-| resolve  | `(value?: T) => void`    | Resolves the promise. |
+| Property | Type                                  | Description           |
+| -------- | ------------------------------------- | --------------------- |
+| promise  | `Promise<T>`                          |                       |
+| reject   | `(reason?: any) => void`              | Rejects the promise.  |
+| resolve  | `(value: T ǀ PromiseLike<T>) => void` | Resolves the promise. |
 
 ## Example
 

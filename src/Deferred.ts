@@ -24,7 +24,7 @@ export class Deferred<T> {
   /**
    * Resolves the promise.
    */
-  resolve!: (value?: T) => void;
+  resolve!: (value: T | PromiseLike<T>) => void;
 
   constructor() {
     this.promise = new Promise<T>((resolve, reject) => {

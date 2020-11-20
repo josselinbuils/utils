@@ -16,9 +16,9 @@ class Subject<T>
 constructor(defaultValue?: T | undefined)
 ```
 
-| Parameter    | Type            | Description                                                                                                                                                                                                                                                                                        |
-| ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.<br/><br/>If a default value was provided and a new value is sent using next, the new value will become the default value.<br/><br/>If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
+| Parameter    | Type            | Description                                                                                                                                                                                                                                                                    |
+| ------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| defaultValue | `T ǀ undefined` | Value to send by default to new subscribers.If a default value was provided and a new value is sent using next, the new value will become the default value.If no default value is provided, nothing will be sent to new subscribers, even if a new value is sent using next . |
 
 ## Methods
 
