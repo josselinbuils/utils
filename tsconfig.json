@@ -12,9 +12,6 @@
     "noUnusedParameters": true,
     "moduleResolution": "node",
     "outDir": "dist",
-    "paths": {
-      "*": ["src/*", "node_modules/*"]
-    },
     "rootDir": "src",
     "strict": true,
     "target": "esnext"

@@ -1,13 +1,26 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const typescript = require('@rollup/plugin-typescript');
-const packageFile = require('./package');
 
-module.exports = {
-  input: ['src/Deferred.ts', 'src/Subject.ts'],
-  output: {
-    dir: 'dist',
-    format: 'es',
-    name: packageFile.name,
+const input = ['src/Deferred.ts', 'src/Subject.ts'];
+const outputDir = 'dist';
+const plugins = [typescript({ tsconfig: './tsconfig.build.json' })];
+
+module.exports = [
+  {
+    input,
+    output: {
+      dir: outputDir,
+      format: 'cjs',
+    },
+    plugins,
   },
-  plugins: [typescript()],
-};
+  {
+    input,
+    output: {
+      entryFileNames: '[name].mjs',
+      dir: outputDir,
+      format: 'es',
+    },
+    plugins,
+  },
+];
