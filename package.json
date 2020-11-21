@@ -16,6 +16,7 @@
     "copy:package-files": "cpx ./package.json dist && cpx ./README.md dist",
     "doc": "api-documenter",
     "build": "rimraf dist && rollup -c && yarn doc && rimraf dist/index.d.ts && yarn copy:package-files",
+    "prepublish": "node ../scripts/prePublishLint.js",
     "lint": "eslint .",
     "test": "jest"
   },
