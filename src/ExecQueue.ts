@@ -44,7 +44,7 @@ export class ExecQueue {
     try {
       deferred.resolve(await task());
     } catch (error) {
-      console.error(error.stack);
+      console.error(error.stack || error.message);
     }
 
     const nextEntry = this.queue.shift();
