@@ -1,21 +1,21 @@
 import { Deferred } from './Deferred';
 
-type Task<T> = () => Promise<T>;
-
 /**
- * Allows to execute asynchronous tasks in a synchronous manner.
+ * Allows executing asynchronous tasks synchronously.
  */
 export class ExecQueue {
   private busy = false;
   private readonly queue: {
     deferred: Deferred<any>;
-    task: Task<any>;
+    task: () => Promise<any>;
   }[] = [];
 
   /**
    * Pushes an asynchronous task in the exec queue.
+   *
+   * @param task - Function to be executed when previous tasks are done.
    */
-  async enqueue<T>(task: Task<T>): Promise<T> {
+  async enqueue<T>(task: () => Promise<T>): Promise<T> {
     const deferred = new Deferred<T>();
 
     if (!this.busy) {
@@ -28,12 +28,17 @@ export class ExecQueue {
 
   /**
    * Makes a function synchronous by enqueuing its executions.
+   *
+   * @param func - Function to make synchronous.
    */
   makeSync<T extends (...args: any) => any>(func: T): T {
     return ((...args) => this.enqueue(() => func(...args))) as T;
   }
 
-  private async exec<T>(task: Task<T>, deferred: Deferred<T>): Promise<void> {
+  private async exec<T>(
+    task: () => Promise<T>,
+    deferred: Deferred<T>
+  ): Promise<void> {
     this.busy = true;
 
     try {
