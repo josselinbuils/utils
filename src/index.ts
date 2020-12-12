@@ -4,4 +4,5 @@
  * @packageDocumentation
  */
 export * from './Deferred';
+export * from './ExecQueue';
 export * from './Subject';
