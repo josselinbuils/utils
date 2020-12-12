@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const typescript = require('@rollup/plugin-typescript');
 
-const input = ['src/Deferred.ts', 'src/Subject.ts'];
+const input = ['src/Deferred.ts', 'src/ExecQueue.ts', 'src/Subject.ts'];
 const outputDir = 'dist';
 const plugins = [typescript({ tsconfig: './tsconfig.build.json' })];
 
